@@ -1,0 +1,112 @@
+@import './variables';
+@import './resets';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+h2 {
+    position: absolute;
+    top: 10px;
+}
+
+.range-container {
+    position: relative;
+
+    input {
+        background-color: transparent;
+    }
+
+    input[type='range'] {
+        width: 300px;
+        margin: 18px 0;
+        -webkit-appearance: none;
+
+        &:focus {
+            outline: none;
+        }
+
+        & + label {
+            background-color: #fff;
+            position: absolute;
+            top: -25px;
+            left: 110px;
+            width: 80px;
+            padding: 5px 0;
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        // Chrome & Safari
+
+        &::-webkit-slider-runnable-track {
+            background: $line-color;
+            border-radius: 15px;
+            width: 100%;
+            height: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            background: $btn-color;
+            border-radius: 50%;
+            border: 1px solid #555;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin-top: -7px;
+            cursor: pointer;
+        }
+
+        // END of Chrome & Safari
+
+        // Firefox
+
+        &::-moz-range-track {
+            background: $line-color;
+            border-radius: 15px;
+            width: 100%;
+            height: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        &::-moz-range-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            background: $btn-color;
+            border-radius: 50%;
+            border: 1px solid #555;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin-top: -7px;
+            cursor: pointer;
+        }
+
+        // END of Firefox
+
+        // IE
+
+        &::-ms-track {
+            background: $line-color;
+            border-radius: 15px;
+            width: 100%;
+            height: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        &::-ms-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            background: $btn-color;
+            border-radius: 50%;
+            border: 1px solid #555;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin-top: -7px;
+            cursor: pointer;
+        }
+    }
+}
